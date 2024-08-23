@@ -65,9 +65,9 @@ def Newton_multi(x0:np.ndarray,f,error=1e-4):
 
 def main():
     def f(x): return x**4/4-x**3-x
-    def f_multi(x): return (x[0]-1)**2 + x[1]**2 + 3*x[0]*x[1]
+    # def f_multi(x): return (x[0]-1)**2 + x[1]**2 + 3*x[0]*x[1]
     print(Newton(10,f))
-    print(Newton_multi(np.array([10.,1.]),f_multi))
+    # print(Newton_multi(np.array([10.,1.]),f_multi))
 
 
 
