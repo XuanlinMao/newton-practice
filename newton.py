@@ -38,8 +38,8 @@ def Newton(x0,f,error=1e-4):
     while delta>error:
         if x > 1e7:
            raise RuntimeError(f"At iteration {iter}, optimization appears to be diverging")
-        if x > 3:
-           warnings.warn(f"{x} is greater than 3.")
+        if abs(x) > 100:
+           warnings.warn(f"abs({x}) is greater than 100.")
         
         delta = diff(f,x)/diff2(f,x)
         while f(x-delta)>f(x):
